@@ -76,7 +76,31 @@ const mockData = [
     description:
       "Un juego de utensilios de cocina de 10 piezas antiadherentes con mangos resistentes al calor.",
     price: 129.99,
-    category: "Cocina",
+    category: "destacados",
+    image: "/image/bicil.jpg",
+  },
+  {
+    title: "Juego de Utensilios de Cocina",
+    description:
+      "Un juego de utensilios de cocina de 10 piezas antiadherentes con mangos resistentes al calor.",
+    price: 129.99,
+    category: "destacados",
+    image: "/image/bicil.jpg",
+  },
+  {
+    title: "Juego de Utensilios de Cocina",
+    description:
+      "Un juego de utensilios de cocina de 10 piezas antiadherentes con mangos resistentes al calor.",
+    price: 129.99,
+    category: "destacados",
+    image: "/image/bicil.jpg",
+  },
+  {
+    title: "Juego de Utensilios de Cocina",
+    description:
+      "Un juego de utensilios de cocina de 10 piezas antiadherentes con mangos resistentes al calor.",
+    price: 129.99,
+    category: "destacados",
     image: "/image/bicil.jpg",
   },
 ];

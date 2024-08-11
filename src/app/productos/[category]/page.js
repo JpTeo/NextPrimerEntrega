@@ -14,9 +14,11 @@ const Tipo = () => {
       );
   return (
     <>
-      <h1> Esta pagina es por el tipo: {category} </h1>
+      <h1 className="bg-black text-white text-4xl font-bold w-full text-center py-4 capitalize">
+        {" "}
+        {category}{" "}
+      </h1>
       <ProductList category={category} data={filterData} />
-     
     </>
   );
 };

@@ -7,8 +7,7 @@ import mockData from '../../../data/mockData';
 function productos() {
   return (
     <>
-      <h1>Productos:</h1>
-      <ProductList  category={"all"} data={mockData}/>
+        <ProductList  category={"all"} data={mockData}/>
     </>
   );
 }

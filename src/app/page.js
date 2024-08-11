@@ -8,12 +8,15 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Counter from "./components/Counter";
 import MenuList from "./components/MenuList";
+import ProductList from "./components/ProductList";
+import mockData from "../../data/mockData";
 
 export default function Home() {
   return (
     <>
-    <MenuList></MenuList>
-<Header></Header>
+      <MenuList></MenuList>
+      <Header></Header>
+      
       <Footer></Footer>
     </>
   );

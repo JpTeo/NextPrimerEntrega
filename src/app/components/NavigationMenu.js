@@ -13,7 +13,7 @@ const NavigationMenu = () => {
 
   return (
     <div className="bg-gray-800 p-4">
-      <ul className="flex space-x-4 justify-center">
+      <ul className="flex space-x-4 justify-center ">
         {categories.map((category, index) => (
           <li key={index} className={"text-white"}>
             <Link href={`/productos/${category.toLowerCase()}`}>
