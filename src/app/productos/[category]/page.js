@@ -3,6 +3,10 @@ import { useParams } from "next/navigation";
 import React from "react";
 import mockData from "../../../../data/mockData";
 import ProductList from "@/app/components/ProductList";
+import NavigationMenu from "@/app/components/NavigationMenu";
+
+
+
 
 
 const Tipo = () => {
@@ -18,8 +22,9 @@ const Tipo = () => {
         {" "}
         {category}{" "}
       </h1>
+    
       <ProductList category={category} data={filterData} />
-    </>
+          </>
   );
 };
 

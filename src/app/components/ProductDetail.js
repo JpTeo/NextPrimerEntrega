@@ -1,11 +1,12 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import ProductCardDetail from "./ProductCardDetail";
 
-function ProductList({ data, category }) {
+function ProductDetail({ data, category }) {
   return (
     <div className="flex flex-wrap justify-center items-center">
       {data.map((product, index) => (
-        <ProductCard
+        <ProductCardDetail
           key={index}
           title={product.title}
           slug={product.slug}
@@ -20,4 +21,4 @@ function ProductList({ data, category }) {
   );
 }
 
-export default ProductList;
+export default ProductDetail;

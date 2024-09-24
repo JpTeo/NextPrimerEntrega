@@ -8,16 +8,28 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Counter from "./components/Counter";
 import MenuList from "./components/MenuList";
-import ProductList from "./components/ProductList";
-import mockData from "../../data/mockData";
+
+
+export const metadata = {
+  title: "Jp shop",
+  description: "E-commerse de productos",
+  keywords: ["E-commerse", "Productos", "NextJS", "Vercel", "SSR"],
+  openGraph: {
+    title: "Proyecto Next js",
+    description: "tienda creada con next Js",
+    type: "article",
+    publishedTime: "2024-08-12",
+    authors: ["Juan Pablo Palacios"]
+  },
+};
+
 
 export default function Home() {
   return (
     <>
-      <MenuList></MenuList>
+   
       <Header></Header>
-      
-      <Footer></Footer>
+     
     </>
   );
 }

@@ -5,7 +5,6 @@ import MenuList from '../components/MenuList';
 const Layout = ({children}) => { 
   return (
     <div>
-      <MenuList></MenuList>
       <NavigationMenu />
       {children}
     </div>

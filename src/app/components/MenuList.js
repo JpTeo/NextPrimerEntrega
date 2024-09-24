@@ -1,9 +1,31 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const links = [
+  {
+    label: "Inicio",
+    href: "/",
+  },
+  {
+    label: "Productos",
+    href: "/productos",
+  },
+  {
+    label: "Nosotros",
+    href: "/nosotros",
+  },
+  {
+    label: "Contacto",
+    href: "/contacto",
+  },
+];
 
 const MenuList = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname()
 
   return (
     <nav className="bg-gray-800">
@@ -11,7 +33,7 @@ const MenuList = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-white text-xl font-bold">
+              <Link href={"/"} className="text-white text-xl font-bold">
                 Jp Shop
               </Link>
             </div>
@@ -44,36 +66,24 @@ const MenuList = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                href="/productos"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Productos
-              </Link>
-              <Link
-                href="/tienda"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Tienda
-              </Link>
-              <Link
-                href="/catalogo"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Catálogo
-              </Link>
-              <Link
-                href="/nosotros"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Nosotros
-              </Link>
-              <Link
-                href="/carrito"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Carrito
-              </Link>
+          {
+            links.map(link => {
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`${
+                    pathname === link.href ? "font-bold" : ""
+                  } text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm `}
+                >
+                  {link.label}
+                </Link>
+              );
+
+            })
+
+
+          } 
             </div>
           </div>
         </div>

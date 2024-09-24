@@ -1,15 +1,15 @@
-import React from 'react'
-import mockData from '../../../data/mockData';
-import Link from 'next/link';
+import React from "react";
+import mockData from "../../../data/mockData";
+import Link from "next/link";
 
-function getUniqueCatergories (data) {
-const categories = data.map((item) => item.category);
-return [...new Set(categories)];
+function getUniqueCatergories(data) {
+  const categories = data.map((item) => item.category);
+  return [...new Set(categories)];
 }
 
-const NavigationMenu = () => { 
-    const categories = getUniqueCatergories(mockData);
-    console.log({categories});
+const NavigationMenu = () => {
+  const categories = getUniqueCatergories(mockData);
+  console.log({ categories });
 
   return (
     <div className="bg-gray-800 p-4">
@@ -24,6 +24,6 @@ const NavigationMenu = () => {
       </ul>
     </div>
   );
-}
+};
 
-export default NavigationMenu
+export default NavigationMenu;
